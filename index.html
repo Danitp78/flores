@@ -438,7 +438,22 @@
                 <div class="head" id="head-5"></div>
             </div>
             
-        
+            <div class="sunflower" style="--delay: 6; bottom: -10vmin; left: 60%;">
+                <div class="stem">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+                <div class="head" id="head-6"></div>
+            </div>
+            
+            <div class="sunflower" style="--delay: 7; bottom: -10vmin; left: 80%;">
+                <div class="stem">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+                <div class="head" id="head-7"></div>
+            </div>
+        </div>
 
         <div class="grass" id="grass"></div>
     </div>
