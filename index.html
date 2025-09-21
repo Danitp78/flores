@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campo de Girasoles con Pasto Alto</title>
+    <title>Campo de Girasoles Responsive</title>
     <style>
         * {
             margin: 0;
@@ -77,7 +77,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 180px; /* Pasto más alto */
+            height: 25vh; /* Altura relativa para móviles */
             background: linear-gradient(to top, #2e7d32, #4caf50, #81c784);
             border-top-left-radius: 50% 40px;
             border-top-right-radius: 50% 40px;
@@ -102,7 +102,7 @@
             background: linear-gradient(to right, #81c784, #4caf50, #81c784);
             border-radius: 2px;
             z-index: 8;
-            bottom: 90px; /* Ajustado para el pasto más alto */
+            bottom: 15vh; /* Ajustado para el pasto más alto */
             transform-origin: left center;
             opacity: 0.7;
         }
@@ -110,7 +110,7 @@
         /* 🌻 Girasoles en forma de V */
         .sunflowers-container {
             position: absolute;
-            bottom: 180px; /* Ajustado para el pasto más alto */
+            bottom: 25vh; /* Ajustado para el pasto más alto */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -122,8 +122,8 @@
 
         .sunflower {
             position: absolute;
-            width: 100px;
-            height: 180px;
+            width: 14vmin; /* Tamaño relativo para móviles */
+            height: 25vmin; /* Tamaño relativo para móviles */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -135,8 +135,8 @@
         }
 
         .stem {
-            width: 10px;
-            height: 120px;
+            width: 1.5vmin;
+            height: 18vmin;
             background: linear-gradient(to top, #388e3c, #81c784);
             border-radius: 5px;
             position: relative;
@@ -145,31 +145,31 @@
 
         .leaf {
             position: absolute;
-            width: 30px;
-            height: 20px;
+            width: 4vmin;
+            height: 3vmin;
             background: linear-gradient(to top, #388e3c, #81c784);
             border-radius: 0 50% 50% 0;
-            left: 5px;
+            left: 0.5vmin;
             z-index: 1;
         }
 
         .leaf:nth-child(1) {
-            top: 25px;
+            top: 4vmin;
             transform: rotate(-15deg);
         }
 
         .leaf:nth-child(2) {
-            top: 65px;
+            top: 10vmin;
             transform: rotate(15deg);
-            left: -5px;
+            left: -1vmin;
             border-radius: 50% 0 0 50%;
         }
 
         .head {
             position: absolute;
-            top: -80px;
-            width: 90px;
-            height: 90px;
+            top: -12vmin;
+            width: 12vmin;
+            height: 12vmin;
             border-radius: 50%;
             background: #ffeb3b;
             box-shadow: 0 0 25px rgba(255, 235, 59, 0.8);
@@ -182,8 +182,8 @@
 
         .head::before {
             content: '';
-            width: 50px;
-            height: 50px;
+            width: 6vmin;
+            height: 6vmin;
             background: radial-gradient(circle, #5d4037, #3e2723);
             border-radius: 50%;
             z-index: 2;
@@ -202,8 +202,8 @@
 
         .petal-large {
             position: absolute;
-            width: 35px;
-            height: 20px;
+            width: 5vmin;
+            height: 3vmin;
             background: linear-gradient(to bottom, #ffeb3b, #fbc02d);
             border-radius: 50% 50% 50% 50%;
             transform-origin: center bottom;
@@ -213,8 +213,8 @@
 
         .petal-medium {
             position: absolute;
-            width: 30px;
-            height: 18px;
+            width: 4vmin;
+            height: 2.5vmin;
             background: linear-gradient(to bottom, #fff176, #ffd54f);
             border-radius: 50% 50% 50% 50%;
             transform-origin: center bottom;
@@ -223,8 +223,8 @@
 
         .petal-small {
             position: absolute;
-            width: 25px;
-            height: 15px;
+            width: 3vmin;
+            height: 2vmin;
             background: linear-gradient(to bottom, #ffeb3b, #ffc107);
             border-radius: 50% 50% 50% 50%;
             transform-origin: center bottom;
@@ -233,8 +233,8 @@
 
         .seed {
             position: absolute;
-            width: 5px;
-            height: 5px;
+            width: 0.7vmin;
+            height: 0.7vmin;
             background: #3e2723;
             border-radius: 50%;
             z-index: 3;
@@ -268,6 +268,125 @@
             from { transform: rotate(0deg); }
             to   { transform: rotate(360deg); }
         }
+
+        /* Media queries para dispositivos móviles */
+        @media (max-width: 768px) {
+            .sunflowers-container {
+                width: 95%;
+                bottom: 22vh;
+            }
+            
+            .sunflower {
+                width: 12vmin;
+                height: 22vmin;
+            }
+            
+            .stem {
+                height: 15vmin;
+            }
+            
+            .head {
+                top: -10vmin;
+                width: 10vmin;
+                height: 10vmin;
+            }
+            
+            .head::before {
+                width: 5vmin;
+                height: 5vmin;
+            }
+            
+            .petal-large {
+                width: 4vmin;
+                height: 2.5vmin;
+            }
+            
+            .petal-medium {
+                width: 3.5vmin;
+                height: 2vmin;
+            }
+            
+            .petal-small {
+                width: 2.5vmin;
+                height: 1.5vmin;
+            }
+            
+            .leaf:nth-child(2) {
+                top: 8vmin;
+            }
+            
+            .grass {
+                height: 22vh;
+            }
+            
+            .connector {
+                bottom: 12vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sunflowers-container {
+                width: 98%;
+                bottom: 20vh;
+            }
+            
+            .sunflower {
+                width: 10vmin;
+                height: 20vmin;
+            }
+            
+            .head {
+                top: -9vmin;
+                width: 9vmin;
+                height: 9vmin;
+            }
+            
+            .stem {
+                height: 14vmin;
+            }
+            
+            .petal-large {
+                width: 3.5vmin;
+                height: 2vmin;
+            }
+            
+            .grass {
+                height: 20vh;
+            }
+            
+            .connector {
+                display: none; /* Ocultamos conectores en móviles muy pequeños */
+            }
+            
+            /* Ajustamos posiciones de los girasoles para pantallas pequeñas */
+            .sunflower:nth-child(1) { left: 50% !important; }
+            .sunflower:nth-child(2) { left: 25% !important; }
+            .sunflower:nth-child(3) { left: 75% !important; }
+            .sunflower:nth-child(4) { left: 10% !important; }
+            .sunflower:nth-child(5) { left: 90% !important; }
+            .sunflower:nth-child(6) { left: 40% !important; }
+            .sunflower:nth-child(7) { left: 60% !important; }
+        }
+
+        /* Ajustes para orientación horizontal */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .grass {
+                height: 35vh;
+            }
+            
+            .sunflowers-container {
+                bottom: 35vh;
+            }
+            
+            .connector {
+                bottom: 22vh;
+            }
+            
+            .sunflower {
+                width: 12vmin;
+                height: 22vmin;
+            }
+        }
     </style>
 </head>
 <body>
@@ -278,7 +397,7 @@
         <!-- 🌻 Girasoles en forma de V -->
         <div class="sunflowers-container">
             <!-- Girasol central (más alto) -->
-            <div class="sunflower" style="--delay: 1; bottom: -60px; left: 50%; transform: translateX(-50%)">
+            <div class="sunflower" style="--delay: 1; bottom: -10vmin; left: 50%; transform: translateX(-50%)">
                 <div class="stem">
                     <div class="leaf"></div>
                     <div class="leaf"></div>
@@ -287,7 +406,7 @@
             </div>
             
             <!-- Girasoles laterales (formando la V) -->
-            <div class="sunflower" style="--delay: 2; bottom: -60px; left: 30%;">
+            <div class="sunflower" style="--delay: 2; bottom: -10vmin; left: 30%;">
                 <div class="stem">
                     <div class="leaf"></div>
                     <div class="leaf"></div>
@@ -295,7 +414,7 @@
                 <div class="head" id="head-2"></div>
             </div>
             
-            <div class="sunflower" style="--delay: 3; bottom: -60px; left: 70%;">
+            <div class="sunflower" style="--delay: 3; bottom: -10vmin; left: 70%;">
                 <div class="stem">
                     <div class="leaf"></div>
                     <div class="leaf"></div>
@@ -303,37 +422,36 @@
                 <div class="head" id="head-3"></div>
             </div>
 
-            <div class="sunflower" style="--delay: 3; bottom: -60px; left: 40%;">
-                <div class="stem">
-                    <div class="leaf"></div>
-                    <div class="leaf"></div>
-                </div>
-                <div class="head" id="head-3"></div>
-            </div>
-
-<div class="sunflower" style="--delay: 3; bottom: -60px; left: 20%;">
-                <div class="stem">
-                    <div class="leaf"></div>
-                    <div class="leaf"></div>
-                </div>
-                <div class="head" id="head-3"></div>
-            </div>
-
-	
-            <div class="sunflower" style="--delay: 4; bottom: -60px; left: 60%;">
+            <div class="sunflower" style="--delay: 4; bottom: -10vmin; left: 40%;">
                 <div class="stem">
                     <div class="leaf"></div>
                     <div class="leaf"></div>
                 </div>
                 <div class="head" id="head-4"></div>
             </div>
-            
-            <div class="sunflower" style="--delay: 5; bottom: -60px; left: 80%;">
+
+            <div class="sunflower" style="--delay: 5; bottom: -10vmin; left: 20%;">
                 <div class="stem">
                     <div class="leaf"></div>
                     <div class="leaf"></div>
                 </div>
                 <div class="head" id="head-5"></div>
+            </div>
+            
+            <div class="sunflower" style="--delay: 6; bottom: -10vmin; left: 60%;">
+                <div class="stem">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+                <div class="head" id="head-6"></div>
+            </div>
+            
+            <div class="sunflower" style="--delay: 7; bottom: -10vmin; left: 80%;">
+                <div class="stem">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+                <div class="head" id="head-7"></div>
             </div>
         </div>
 
@@ -363,13 +481,13 @@
             
             function createGrassDetails() {
                 // Crear briznas de hierba en el pasto
-                for (let i = 0; i < 40; i++) {
+                for (let i = 0; i < 30; i++) {
                     const grassDetail = document.createElement('div');
                     grassDetail.className = 'grass-detail';
                     
                     // Posición aleatoria en el pasto
                     const leftPosition = Math.random() * 100;
-                    const height = 20 + Math.random() * 30;
+                    const height = 15 + Math.random() * 25;
                     
                     grassDetail.style.left = `${leftPosition}%`;
                     grassDetail.style.height = `${height}px`;
@@ -384,13 +502,18 @@
             }
             
             function createConnectors() {
+                // Solo crear conectores en pantallas grandes
+                if (window.innerWidth < 480) return;
+                
                 // Posiciones de los girasoles (coordenadas relativas al contenedor)
                 const sunflowerPositions = [
                     { left: 50, bottom: 0 },    // Central
-                    { left: 30, bottom: 20 },   // Lateral izquierdo 1
-                    { left: 70, bottom: 20 },   // Lateral derecho 1
-                    { left: 20, bottom: 40 },   // Lateral izquierdo 2
-                    { left: 80, bottom: 40 }    // Lateral derecho 2
+                    { left: 30, bottom: 0 },   // Lateral izquierdo 1
+                    { left: 70, bottom: 0 },   // Lateral derecho 1
+                    { left: 20, bottom: 0 },   // Lateral izquierdo 2
+                    { left: 80, bottom: 0 },    // Lateral derecho 2
+                    { left: 40, bottom: 0 },   // Lateral izquierdo 3
+                    { left: 60, bottom: 0 }    // Lateral derecho 3
                 ];
                 
                 // Conectar cada girasol con sus vecinos
@@ -400,10 +523,7 @@
                         const pos2 = sunflowerPositions[j];
                         
                         // Solo conectar girasoles cercanos
-                        const distance = Math.sqrt(
-                            Math.pow(pos1.left - pos2.left, 2) + 
-                            Math.pow(pos1.bottom - pos2.bottom, 2)
-                        );
+                        const distance = Math.abs(pos1.left - pos2.left);
                         
                         if (distance < 35) {
                             const connector = document.createElement('div');
@@ -411,10 +531,9 @@
                             
                             // Calcular ángulo y longitud
                             const deltaX = pos2.left - pos1.left;
-                            const deltaY = pos2.bottom - pos1.bottom;
                             
-                            const length = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-                            const angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+                            const length = Math.abs(deltaX);
+                            const angle = deltaX > 0 ? 0 : 180;
                             
                             connector.style.width = `${length}%`;
                             connector.style.left = `${pos1.left}%`;
@@ -427,48 +546,50 @@
             }
             
             function createSunflowerPetals() {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 7; i++) {
                     const head = document.getElementById(`head-${i}`);
+                    if (!head) continue;
                     
                     // Crear pétalos grandes (capa exterior)
-                    for (let j = 0; j < 16; j++) {
+                    for (let j = 0; j < 14; j++) {
                         const petal = document.createElement('div');
                         petal.className = 'petal-large';
-                        petal.style.transform = `rotate(${j * (360/16)}deg) translateY(-12px)`;
+                        petal.style.transform = `rotate(${j * (360/14)}deg) translateY(-40%)`;
                         head.appendChild(petal);
                     }
                     
                     // Crear pétalos medianos (capa media)
-                    for (let j = 0; j < 16; j++) {
+                    for (let j = 0; j < 14; j++) {
                         const petal = document.createElement('div');
                         petal.className = 'petal-medium';
-                        petal.style.transform = `rotate(${j * (360/16) + 10}deg) translateY(-7px)`;
+                        petal.style.transform = `rotate(${j * (360/14) + 10}deg) translateY(-25%)`;
                         head.appendChild(petal);
                     }
                     
                     // Crear pétalos pequeños (capa interior)
-                    for (let j = 0; j < 16; j++) {
+                    for (let j = 0; j < 14; j++) {
                         const petal = document.createElement('div');
                         petal.className = 'petal-small';
-                        petal.style.transform = `rotate(${j * (360/16) + 5}deg) translateY(-3px)`;
+                        petal.style.transform = `rotate(${j * (360/14) + 5}deg) translateY(-10%)`;
                         head.appendChild(petal);
                     }
                 }
             }
             
             function createSeeds() {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 7; i++) {
                     const head = document.getElementById(`head-${i}`);
+                    if (!head) continue;
                     
                     // Crear semillas en el centro
-                    for (let j = 0; j < 24; j++) {
+                    for (let j = 0; j < 20; j++) {
                         const seed = document.createElement('div');
                         seed.className = 'seed';
                         
-                        const angle = j * (360/24);
-                        const radius = 20;
+                        const angle = j * (360/20);
+                        const radius = 40;
                         
-                        seed.style.transform = `rotate(${angle}deg) translate(${radius}px)`;
+                        seed.style.transform = `rotate(${angle}deg) translate(${radius}%)`;
                         
                         head.appendChild(seed);
                     }
@@ -476,8 +597,10 @@
             }
             
             function createFallingFlowers() {
-                // Crear 6 flores que caen (pocas)
-                for (let i = 0; i < 6; i++) {
+                // Menos flores cayendo en móviles para mejor rendimiento
+                const flowerCount = window.innerWidth < 768 ? 4 : 6;
+                
+                for (let i = 0; i < flowerCount; i++) {
                     setTimeout(() => {
                         createFallingFlower();
                         // Crear una nueva flor cada 7 segundos (lentas)
@@ -521,6 +644,14 @@
                 }
                 return petalsHTML;
             }
+
+            // Reajustar en redimensionamiento
+            window.addEventListener('resize', function() {
+                // Limpiar conectores existentes
+                connectorsContainer.innerHTML = '';
+                // Volver a crear conectores (si es necesario)
+                createConnectors();
+            });
         });
     </script>
 </body>
