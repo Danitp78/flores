@@ -438,9 +438,7 @@
                 <div class="head" id="head-5"></div>
             </div>
             
-            
-            
-            
+        
 
         <div class="grass" id="grass"></div>
     </div>
